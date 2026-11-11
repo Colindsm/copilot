@@ -56,12 +56,22 @@ Double-click `public/index.html` to open it in any browser.
 
 ### Updating the site
 
+The live site is the Cloudflare Pages project **graysons-detailing** (https://graysons-detailing.pages.dev) in Grayson's account.
+
+It's deployed as a single bundled file, because the session that set it up couldn't use Cloudflare's normal asset upload:
+
 ```sh
 cd graysons-detailing
-CLOUDFLARE_ACCOUNT_ID=38e6ba3cb2fba1b47bb4a55a6e7bf97d npx wrangler pages deploy
+python3 build-worker.py dist-worker          # bundles public/ (page + images) into dist-worker/_worker.js
+curl -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+  "https://api.cloudflare.com/client/v4/accounts/38e6ba3cb2fba1b47bb4a55a6e7bf97d/pages/projects/graysons-detailing/deployments" \
+  -F 'manifest={}' -F 'branch=main' \
+  -F "_worker.js=@dist-worker/_worker.js;filename=_worker.js;type=application/javascript+module"
 ```
 
-Or, in the Cloudflare dashboard: **Workers & Pages → graysons-detailing → Create deployment**, then drag in the `public` folder.
+The bundle must stay under Cloudflare's 3 MB compressed limit. With 5 photos it's about 2.1 MB, so resize any new photos to about 1800px and keep only the best ones.
+
+Alternatively, in the Cloudflare dashboard, open the **graysons-detailing** project and create a new deployment by uploading the `public` folder.
 
 ### Connecting the domain (website records only)
 
