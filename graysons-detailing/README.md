@@ -13,7 +13,7 @@ graysons-detailing/
 ## Still needed from Grayson
 
 - [x] **Photos.** Five are in `public/images/`: the Porsche 911 hero shot, the Lightning, the hood reflection, the foam wash and the Grand National with his banner.
-- [x] **Phone:** (613) 602-6096, for calls and texts.
+- [x] **Phone:** (613) 602-5096, for calls and texts.
 - [ ] **Prices,** if he wants them shown. Each service card currently says "Priced by vehicle".
 - [ ] **Mobile or shop?** Does he come to the customer, or do they drop off? Add it to the facts in the hero and to step 3.
 - [ ] **Reviews.** Two or three customer reviews from Facebook would fit well between "How booking works" and "About".
