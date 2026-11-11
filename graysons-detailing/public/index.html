@@ -655,9 +655,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       if (p.w) { img.width = p.w; img.height = p.h; }
       btn.appendChild(img);
       btn.addEventListener("click", function () { openLightbox(p); });
-      var cap = document.createElement("figcaption");
-      cap.textContent = p.caption;
-      fig.appendChild(btn); fig.appendChild(cap);
+      fig.appendChild(btn);
       gallery.appendChild(fig);
     });
   } else {
