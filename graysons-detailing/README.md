@@ -12,20 +12,21 @@ graysons-detailing/
 
 ## Still needed from Grayson
 
-The site only uses facts from his earlier draft and from family. Fill these in when you have them:
-
-- [ ] **Photos.** Add 6–12 before/after shots from Facebook to `public/images/`. Then list them in `PHOTOS` near the bottom of `index.html`:
-  ```js
-  var PHOTOS = [
-    { src: "images/f150-interior-after.jpg", caption: "F-150 interior, after" },
-  ];
-  ```
-  The labelled "Photo coming soon" slots disappear once `PHOTOS` has entries. Resize photos to about 1600px wide before adding them.
-- [ ] **Phone number,** if he wants calls or texts. Add a "Phone" row in the booking section.
+- [x] **Photos.** Five are in `public/images/`: the Porsche 911 hero shot, the Lightning, the hood reflection, the foam wash and the Grand National with his banner.
+- [x] **Phone:** (613) 602-6096, for calls and texts.
 - [ ] **Prices,** if he wants them shown. Each service card currently says "Priced by vehicle".
 - [ ] **Mobile or shop?** Does he come to the customer, or do they drop off? Add it to the facts in the hero and to step 3.
 - [ ] **Reviews.** Two or three customer reviews from Facebook would fit well between "How booking works" and "About".
-- [ ] **The quote in About.** It was adapted from his draft ("…the one that wins us our third year"), since he has now won a third. Check that he's happy with the wording.
+- [ ] **The quote in About.** It was adapted from his draft ("…the one that wins us our third year"). Check that he's happy with the wording.
+
+### Adding more photos
+
+1. Resize the photo to about 1800px on the long side, and save it as a JPEG in `public/images/`.
+2. Add a line to `PHOTOS` near the bottom of `index.html`:
+   ```js
+   { src: "images/new-photo.jpg", w: 1800, h: 1350, caption: "What it shows" },
+   ```
+   `w` and `h` are the photo's width and height in pixels.
 
 ## Award record (as given)
 
@@ -55,7 +56,7 @@ The domain is registered at Squarespace (it moved over from Google Domains) and 
 
 ### 1. Upload the new site (about 5 minutes)
 
-1. Make the upload package. Create a folder (for example `graysons-cloudflare-pages`) and put only `public/index.html` in it. You can also zip that file as `graysons-cloudflare-pages.zip`.
+1. Make the upload package. Create a folder (for example `graysons-cloudflare-pages`) and copy `public/index.html` **and the `public/images/` folder** into it. You can also zip the folder's contents as `graysons-cloudflare-pages.zip`.
 2. Log in to Grayson's Cloudflare account at dash.cloudflare.com.
 3. Go to **Workers & Pages** and open the project that holds his draft.
    - If it's a **Pages** project: open **Deployments → Create deployment**, then drag in the folder or zip.
