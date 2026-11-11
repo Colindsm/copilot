@@ -73,12 +73,20 @@ The bundle must stay under Cloudflare's 3 MB compressed limit. With 5 photos it'
 
 Alternatively, in the Cloudflare dashboard, open the **graysons-detailing** project and create a new deployment by uploading the `public` folder.
 
-### Connecting the domain (website records only)
+### How the domain is connected (live since Nov 11, 2026)
 
-In **Squarespace → Domains → graysonsautomotivedetailing.com → DNS**:
+Squarespace still runs the domain's DNS and email. **Email records were not changed.**
 
-1. Change the **`www` CNAME** from `ext-sq.squarespace.com` to `graysons-detailing.pages.dev`.
-2. Forward the **bare domain** (`graysonsautomotivedetailing.com`) to `https://www.graysonsautomotivedetailing.com`.
-3. **Leave all MX, TXT and email-forwarding settings exactly as they are.**
+The website is reached through a **Squarespace domain forwarding rule**:
 
-The project also has `www.graysonsautomotivedetailing.com` added as a custom domain in Cloudflare Pages, so Cloudflare issues the HTTPS certificate once the CNAME is in place.
+| From | To | Type |
+|---|---|---|
+| graysonsautomotivedetailing.com, www.graysonsautomotivedetailing.com | https://graysons-detailing.pages.dev | Permanent (301), SSL on |
+
+Visitors who type his domain land on the site, and the address bar then shows `graysons-detailing.pages.dev`.
+
+**Optional upgrade, to keep his domain in the address bar:**
+1. Remove `www` from the forwarding rule, and point the `@` rule at `https://www.graysonsautomotivedetailing.com`.
+2. In Squarespace DNS, set a CNAME record: `www` → `graysons-detailing.pages.dev`.
+
+`www.graysonsautomotivedetailing.com` is already registered as a custom domain on the Pages project, so Cloudflare issues its certificate once the CNAME exists.
