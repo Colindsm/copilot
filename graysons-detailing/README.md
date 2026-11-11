@@ -52,27 +52,23 @@ Double-click `public/index.html` to open it in any browser.
 
 ## Going live on graysonsautomotivedetailing.com
 
-The domain is registered at Squarespace (it moved over from Google Domains) and currently shows a "Coming Soon" page. Grayson's earlier draft was published by uploading a folder with a single `index.html` to Cloudflare, and the new site goes up the same way.
+**The domain and email stay at Squarespace.** Squarespace keeps running the domain's DNS and its email forwarding. Nothing about mail is changed. The site itself is hosted on **Cloudflare Pages** in Grayson's Cloudflare account, as the project `graysons-detailing`.
 
-### 1. Upload the new site (about 5 minutes)
+### Updating the site
 
-1. Make the upload package. Create a folder (for example `graysons-cloudflare-pages`) and copy `public/index.html` **and the `public/images/` folder** into it. You can also zip the folder's contents as `graysons-cloudflare-pages.zip`.
-2. Log in to Grayson's Cloudflare account at dash.cloudflare.com.
-3. Go to **Workers & Pages** and open the project that holds his draft.
-   - If it's a **Pages** project: open **Deployments → Create deployment**, then drag in the folder or zip.
-   - If it's a **Worker** (the draft's address ends in `workers.dev`): it's simplest to make a new Pages project. Go to **Create → Pages → Upload assets**, name it `graysons-detailing`, and drag in the folder or zip.
-4. Cloudflare gives you a preview link ending in `.pages.dev`. Open it on a phone and check it.
+```sh
+cd graysons-detailing
+CLOUDFLARE_ACCOUNT_ID=38e6ba3cb2fba1b47bb4a55a6e7bf97d npx wrangler pages deploy
+```
 
-To update the site later (new photos or prices), edit `index.html` and upload it again the same way.
+Or, in the Cloudflare dashboard: **Workers & Pages → graysons-detailing → Create deployment**, then drag in the `public` folder.
 
-### 2. Point graysonsautomotivedetailing.com at it
+### Connecting the domain (website records only)
 
-1. In the Pages project, go to **Custom domains → Set up a custom domain** and enter `graysonsautomotivedetailing.com`. Then do the same again for `www.graysonsautomotivedetailing.com`.
-2. Cloudflare asks to manage the domain's DNS. Pick the **Free** plan, and Cloudflare copies over the existing DNS records.
-   - ⚠️ **Before going further, check email.** If grayson@graysonsautomotivedetailing.com is a real mailbox, make sure its **MX** and **TXT** records came across. Otherwise email stops working.
-3. In **Squarespace → Domains → graysonsautomotivedetailing.com → DNS → Nameservers**, choose **Use custom nameservers** and enter the two nameservers Cloudflare shows you.
-4. Wait about an hour. Then the domain shows the new site, with HTTPS set up automatically.
+In **Squarespace → Domains → graysonsautomotivedetailing.com → DNS**:
 
-### Advanced: command line
+1. Change the **`www` CNAME** from `ext-sq.squarespace.com` to `graysons-detailing.pages.dev`.
+2. Forward the **bare domain** (`graysonsautomotivedetailing.com`) to `https://www.graysonsautomotivedetailing.com`.
+3. **Leave all MX, TXT and email-forwarding settings exactly as they are.**
 
-`wrangler.jsonc` in this folder deploys `public/` as a Cloudflare Worker with `npx wrangler login && npx wrangler deploy`. This is an alternative to the upload method above.
+The project also has `www.graysonsautomotivedetailing.com` added as a custom domain in Cloudflare Pages, so Cloudflare issues the HTTPS certificate once the CNAME is in place.
