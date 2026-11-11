@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grayson's Automotive Detailing</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Award-winning interior and exterior auto detailing in Pembroke, Ontario. Three-time first place in Renfrew County (2023, 2024, 2026). Serving Renfrew County since 2021.">
+<meta property="og:title" content="Grayson's Automotive Detailing | Pembroke, ON">
+<meta property="og:description" content="Three-time first place detailer in Renfrew County. Interior, exterior and full details for cars, trucks and SUVs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://graysonsautomotivedetailing.com/">
+<link rel="canonical" href="https://graysonsautomotivedetailing.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A111D'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23E3B04B'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Grayson's Automotive Detailing",
+  "url": "https://graysonsautomotivedetailing.com/",
+  "email": "grayson@graysonsautomotivedetailing.com",
+  "foundingDate": "2021",
+  "description": "Interior and exterior automotive detailing in Pembroke, Ontario. First place in Renfrew County in 2023, 2024 and 2026.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Pembroke", "addressRegion": "ON", "addressCountry": "CA" },
+  "areaServed": { "@type": "AdministrativeArea", "name": "Renfrew County, Ontario" },
+  "sameAs": ["https://www.facebook.com/graysonsdetailing"],
+  "award": ["First place, Renfrew County, 2023", "First place, Renfrew County, 2024", "Second place, Renfrew County, 2025", "First place, Renfrew County, 2026"]
+}
+</script>
+<style>
+/* Layout: one long showroom page. Wide badge-style headlines on midnight paint, gold used only for wins and calls to action. */
+:root {
+  --paint: #0A111D;      /* page: deep blue-black clear coat */
+  --panel: #111A2A;
+  --panel-2: #18243A;
+  --line: #26344D;
+  --fg: #E9EEF6;
+  --muted: #9AA8BE;
+  --gold: #E3B04B;       /* first-place gold, his brand colour */
+  --gold-ink: #1A1205;   /* text on gold */
+  --silver: #B9C3D3;     /* second place */
+  --sheen: #FFFFFF;
+  --font-display: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --step--1: clamp(0.8rem, 0.77rem + 0.15vw, 0.875rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+  --step-3: clamp(2.5rem, 1.6rem + 4.4vw, 5.6rem);
+  --radius: 14px;
+  --wrap: 1140px;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --paint: #F2F4F8; --panel: #FFFFFF; --panel-2: #E8ECF3; --line: #D2D9E4;
+    --fg: #0E1726; --muted: #4D5A6E; --gold: #94650C; --gold-ink: #FFFFFF;
+    --silver: #6E7A8C; --sheen: #7F90AA; color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --paint: #F2F4F8; --panel: #FFFFFF; --panel-2: #E8ECF3; --line: #D2D9E4;
+  --fg: #0E1726; --muted: #4D5A6E; --gold: #94650C; --gold-ink: #FFFFFF;
+  --silver: #6E7A8C; --sheen: #7F90AA; color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  background: var(--paint);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--paint);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); font-stretch: 118%; line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: var(--wrap); margin-inline: auto; }
+.section { padding-block: clamp(64px, 9vw, 120px); }
+.label {
+  font-family: var(--font-mono); font-size: var(--step--1); font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+}
+.lede { color: var(--muted); max-width: 60ch; font-size: var(--step-1); line-height: 1.5; }
+.section-head { display: grid; gap: 14px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section-head h2 { font-size: var(--step-2); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 0 22px; border-radius: 999px;
+  font-family: var(--font-display); font-stretch: 112%; font-weight: 750; font-size: 1rem;
+  text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-gold { background: var(--gold); color: var(--gold-ink); }
+.btn-ghost { border-color: var(--line); color: var(--fg); background: transparent; }
+.btn-ghost:hover { border-color: var(--muted); }
+
+/* Header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: color-mix(in srgb, var(--paint) 86%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.brand-mark {
+  flex: none; width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center;
+  background: var(--gold); color: var(--gold-ink);
+  font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: 1.3rem;
+}
+.brand-name { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1rem; line-height: 1.1; }
+.brand-sub { display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.nav-links { display: none; gap: 28px; }
+.nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.nav-links a:hover { color: var(--fg); }
+.nav .btn { min-height: 44px; padding: 0 18px; flex: none; }
+@media (max-width: 859px) { .nav .btn { display: none; } }
+@media (min-width: 860px) { .nav-links { display: flex; } }
+@media (max-width: 420px) { .brand-sub { display: none; } }
+
+/* Hero */
+.hero { padding-block: clamp(56px, 9vw, 112px) clamp(48px, 7vw, 88px); position: relative; overflow: hidden; }
+.hero::after {
+  content: ""; position: absolute; inset: auto -20% -40% -20%; height: 70%;
+  background: radial-gradient(60% 60% at 50% 100%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.hero-grid { position: relative; z-index: 1; display: grid; gap: 48px; align-items: center; }
+.hero-copy { display: grid; gap: 24px; min-width: 0; }
+.hero h1 { font-size: var(--step-3); font-weight: 900; font-stretch: 125%; }
+.hero h1 .shine {
+  background: linear-gradient(100deg, var(--fg) 0%, var(--fg) 40%, var(--sheen) 50%, var(--fg) 60%, var(--fg) 100%);
+  background-size: 250% 100%; background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: sweep 2.4s .4s ease-out 1 both;
+}
+.hero h1 .gold { color: var(--gold); }
+@keyframes sweep { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 24px; padding: 0; margin: 0; list-style: none; color: var(--muted); font-size: var(--step--1); font-family: var(--font-mono); letter-spacing: 0.04em; }
+.facts li { display: flex; align-items: center; gap: 8px; }
+.facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+.rosette { width: min(100%, 340px); margin-inline: auto; }
+@media (max-width: 859px) { .rosette { width: min(62%, 240px); order: -1; margin-bottom: -16px; } }
+.rosette svg { width: 100%; height: auto; overflow: visible; }
+.rosette .r-gold { fill: var(--gold); }
+.rosette .r-ink { fill: var(--gold-ink); }
+.rosette .r-panel { fill: var(--panel); }
+.rosette .r-line { fill: none; stroke: var(--gold-ink); stroke-opacity: .35; stroke-width: 1.5; }
+.rosette text { font-family: var(--font-display); }
+@media (min-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.8fr); } }
+
+/* Podium record */
+.record { background: var(--panel); border-block: 1px solid var(--line); }
+.record-grid { display: grid; gap: 32px; padding-block: 40px; align-items: end; }
+.record-intro { display: grid; gap: 8px; }
+.record-intro h2 { font-size: var(--step-1); font-stretch: 112%; }
+.record-intro p { color: var(--muted); max-width: 44ch; }
+.podium { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; align-items: end; margin: 0; padding: 0; list-style: none; }
+.podium li { display: grid; gap: 8px; text-align: center; }
+.podium .bar {
+  border-radius: 10px 10px 4px 4px; display: grid; place-items: center;
+  font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: 1.35rem;
+}
+.podium .first .bar { height: 104px; background: var(--gold); color: var(--gold-ink); }
+.podium .second .bar { height: 72px; background: var(--silver); color: var(--paint); }
+.podium .year { font-family: var(--font-mono); font-weight: 600; font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.podium .first .year { color: var(--fg); }
+@media (min-width: 760px) { .record-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
+
+/* Services */
+.services { display: grid; gap: 16px; }
+.service {
+  display: grid; grid-template-rows: auto auto 1fr auto; gap: 14px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px; min-width: 0;
+}
+.service h3 { font-size: var(--step-1); }
+.service p { color: var(--muted); }
+.service ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
+.service li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; }
+.service li svg { margin-top: 5px; color: var(--gold); }
+.service .price {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding-top: 14px; border-top: 1px dashed var(--line);
+  font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted);
+}
+.service .price a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.service.feature { border-color: color-mix(in srgb, var(--gold) 55%, var(--line)); }
+.service .tag { justify-self: start; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.service.feature .tag { color: var(--gold); }
+@media (min-width: 700px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Gallery */
+.gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; } }
+.shot { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; background: var(--panel); border: 1px solid var(--line); aspect-ratio: 4 / 3; max-width: 100%; }
+.shot button { all: unset; cursor: zoom-in; display: block; width: 100%; height: 100%; }
+.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot figcaption {
+  position: absolute; left: 10px; bottom: 10px; right: 10px;
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em;
+  color: var(--fg); background: color-mix(in srgb, var(--paint) 78%, transparent);
+  padding: 6px 10px; border-radius: 8px; justify-self: start; width: fit-content; max-width: calc(100% - 20px);
+}
+.shot.empty {
+  display: grid; place-items: center; text-align: center; padding: 20px;
+  border-style: dashed; background:
+    repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--line) 45%, transparent) 14px 15px), var(--panel);
+}
+.shot.empty span { font-size: 0.75rem; font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+.shot.empty strong { display: block; font-family: var(--font-display); font-stretch: 112%; color: var(--fg); font-size: 1.05rem; margin-bottom: 4px; }
+.gallery-note { margin-top: 20px; color: var(--muted); }
+.gallery-note a { color: var(--gold); }
+
+.lightbox { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: color-mix(in srgb, var(--paint) 92%, transparent); }
+.lightbox img { max-height: 84vh; border-radius: 10px; }
+.lightbox button { position: absolute; top: calc(16px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px)); }
+
+/* Steps */
+.steps { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; gap: 8px; padding: 24px 0 0; border-top: 2px solid var(--line); }
+.steps li::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: var(--step--1); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.steps h3 { font-size: var(--step-1); font-stretch: 112%; }
+.steps p { color: var(--muted); }
+@media (min-width: 760px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; } }
+
+/* About */
+.about { background: var(--panel); border-block: 1px solid var(--line); }
+.about-grid { display: grid; gap: 40px; align-items: center; }
+.about-copy { display: grid; gap: 18px; min-width: 0; }
+.about-copy h2 { font-size: var(--step-2); }
+.about-copy p { color: var(--muted); max-width: 62ch; }
+.pull {
+  margin: 0; padding: 32px; border-radius: var(--radius); background: var(--panel-2); border: 1px solid var(--line);
+  display: grid; gap: 16px;
+}
+.pull blockquote { margin: 0; font-family: var(--font-display); font-stretch: 108%; font-weight: 700; font-size: var(--step-1); line-height: 1.3; }
+.pull figcaption { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+@media (min-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); } }
+
+/* Booking work order */
+.book-grid { display: grid; gap: 40px; }
+.book-info { display: grid; gap: 20px; align-content: start; min-width: 0; }
+.book-info h2 { font-size: var(--step-2); }
+.contact-line { display: grid; gap: 4px; padding: 18px 0; border-top: 1px solid var(--line); }
+.contact-line:last-child { border-bottom: 1px solid var(--line); }
+.contact-line .k { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.contact-line .v { font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+.contact-line a.v { color: var(--gold); text-decoration: none; user-select: auto; }
+
+.order { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; min-width: 0; }
+.order-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 24px; background: var(--panel-2); border-bottom: 1px solid var(--line); }
+.order-head strong { font-family: var(--font-display); font-stretch: 118%; font-size: 1.05rem; }
+.order-head span { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.08em; }
+.order form { display: grid; gap: 18px; padding: 24px; }
+.row { display: grid; gap: 18px; }
+@media (min-width: 560px) { .row.two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label, .field legend { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0; }
+.field input, .field select, .field textarea {
+  width: 100%; font: inherit; color: var(--fg); background: var(--paint);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-height: 48px;
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 25%, transparent); }
+fieldset.field { border: 0; margin: 0; padding: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chips label {
+  font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; letter-spacing: 0; text-transform: none;
+  color: var(--fg); border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; cursor: pointer; min-height: 44px; display: inline-flex; align-items: center;
+}
+.chips input:checked + label { background: var(--gold); color: var(--gold-ink); border-color: var(--gold); }
+.chips input:focus-visible + label { outline: 3px solid var(--gold); outline-offset: 2px; }
+.form-error { color: #E5484D; font-size: var(--step--1); }
+.order .btn { justify-self: start; }
+
+.ready { padding: 24px; display: grid; gap: 16px; }
+.ready h3 { font-size: var(--step-1); font-stretch: 112%; }
+.ready p { color: var(--muted); }
+.ready pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-mono); font-size: 0.85rem; background: var(--paint); border: 1px solid var(--line); border-radius: 10px; padding: 16px; max-height: 280px; overflow: auto; }
+.ready .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.status { font-family: var(--font-mono); font-size: var(--step--1); color: var(--gold); min-height: 1.4em; }
+
+@media (min-width: 900px) { .book-grid { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); } }
+
+/* Footer */
+.footer { border-top: 1px solid var(--line); padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)); color: var(--muted); font-size: var(--step--1); }
+.footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.footer a { color: var(--fg); }
+
+/* Mobile call-to-action bar */
+.mobile-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: color-mix(in srgb, var(--paint) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+}
+.mobile-cta .btn { width: 100%; }
+@media (min-width: 860px) { .mobile-cta { display: none; } }
+@media (max-width: 859px) { .footer { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero h1 .shine { animation: none; background-position: 0 0; }
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header band">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Grayson's Automotive Detailing, back to top">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span>
+        <span class="brand-name">Grayson's Automotive Detailing</span>
+        <span class="brand-sub">Pembroke, Ontario</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <a class="btn btn-gold" href="#book">Book a detail</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero band">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="label">Renfrew County's top-ranked detailer</p>
+        <h1><span class="shine">First place.</span> <span class="gold">Three&nbsp;times.</span></h1>
+        <p class="lede">Interior and exterior detailing for cars, trucks and SUVs around Pembroke. Every vehicle gets the same care that won Renfrew County's top spot in 2023, 2024 and again in 2026.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#book">Request a booking</a>
+          <a class="btn btn-ghost" href="#work">See the work</a>
+        </div>
+        <ul class="facts" aria-label="Quick facts">
+          <li>Detailing since summer 2021</li>
+          <li>Pembroke &amp; Renfrew County</li>
+          <li>Cars, trucks &amp; SUVs</li>
+        </ul>
+      </div>
+
+      <div class="rosette" role="img" aria-label="Award rosette: three-time first place, Renfrew County">
+        <svg viewBox="0 0 240 300" aria-hidden="true">
+          <defs>
+            <path id="arc-top" d="M 42 120 A 78 78 0 0 1 198 120"></path>
+            <path id="arc-bottom" d="M 42 120 A 78 78 0 0 0 198 120"></path>
+          </defs>
+          <!-- ribbon tails -->
+          <path class="r-gold" d="M78 170 L56 292 L84 272 L104 296 L118 186 Z" opacity=".8"></path>
+          <path class="r-gold" d="M162 170 L184 292 L156 272 L136 296 L122 186 Z" opacity=".8"></path>
+          <!-- scalloped outer ring -->
+          <g class="r-gold" id="scallops"></g>
+          <circle class="r-gold" cx="120" cy="120" r="100"></circle>
+          <circle class="r-line" cx="120" cy="120" r="92"></circle>
+          <text class="r-ink" font-size="12.5" font-weight="800" letter-spacing="3.2" style="font-stretch:118%">
+            <textPath href="#arc-top" startOffset="50%" text-anchor="middle">RENFREW COUNTY</textPath>
+          </text>
+          <text class="r-ink" font-size="11" font-weight="700" letter-spacing="2.6" style="font-stretch:112%">
+            <textPath href="#arc-bottom" startOffset="50%" text-anchor="middle">2023 · 2024 · 2026</textPath>
+          </text>
+          <text class="r-ink" x="120" y="124" text-anchor="middle" font-size="56" font-weight="900" style="font-stretch:125%">3×</text>
+          <text class="r-ink" x="120" y="146" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="2" style="font-stretch:118%">FIRST PLACE</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="record band" aria-labelledby="record-title">
+    <div class="wrap record-grid">
+      <div class="record-intro">
+        <p class="label">The record</p>
+        <h2 id="record-title">Four years on the Renfrew County podium</h2>
+        <p>First in 2023 and 2024, second in 2025, then back to first in 2026.</p>
+      </div>
+      <ol class="podium" aria-label="Renfrew County results by year">
+        <li class="first"><div class="bar" aria-hidden="true">1st</div><span class="year">2023</span><span class="sr-only">: first place</span></li>
+        <li class="first"><div class="bar" aria-hidden="true">1st</div><span class="year">2024</span><span class="sr-only">: first place</span></li>
+        <li class="second"><div class="bar" aria-hidden="true">2nd</div><span class="year">2025</span><span class="sr-only">: second place</span></li>
+        <li class="first"><div class="bar" aria-hidden="true">1st</div><span class="year">2026</span><span class="sr-only">: first place</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section band" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Services</p>
+        <h2 id="services-title">Inside, outside, or the whole vehicle</h2>
+        <p class="lede">Every job is quoted for your vehicle's size and condition. Tell Grayson what you drive and he'll send you a price.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <span class="tag">Interior</span>
+          <h3>Interior detail</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Deep vacuum of seats, carpets and mats</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wipe-down of dash, console and door panels</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Stain treatment and trim cleanup</li>
+          </ul>
+          <div class="price"><span>Priced by vehicle</span><a href="#book" data-service="Interior detail">Get a quote →</a></div>
+        </article>
+        <article class="service">
+          <span class="tag">Exterior</span>
+          <h3>Exterior detail</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Careful hand wash</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wheels and tires cleaned</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Glass cleaned and finishing touches for gloss</li>
+          </ul>
+          <div class="price"><span>Priced by vehicle</span><a href="#book" data-service="Exterior detail">Get a quote →</a></div>
+        </article>
+        <article class="service feature">
+          <span class="tag">Most complete</span>
+          <h3>Full detail</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in the interior detail</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in the exterior detail</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The whole vehicle brought back to a sharper standard</li>
+          </ul>
+          <div class="price"><span>Priced by vehicle</span><a href="#book" data-service="Full detail">Get a quote →</a></div>
+        </article>
+        <article class="service">
+          <span class="tag">Seasonal</span>
+          <h3>Seasonal refresh</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Spring cleanup after a Valley winter</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Getting a vehicle ready to sell</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>A reset before or after a road trip</li>
+          </ul>
+          <div class="price"><span>Priced by vehicle</span><a href="#book" data-service="Seasonal refresh">Get a quote →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="work" aria-labelledby="work-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Recent work</p>
+        <h2 id="work-title">Before and after</h2>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <p class="gallery-note">More of Grayson's work is on <a href="https://www.facebook.com/graysonsdetailing" target="_blank" rel="noopener">Facebook</a>.</p>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="how-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">How booking works</p>
+        <h2 id="how-title">Three steps to a clean vehicle</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Send a request</h3><p>Fill in the form below with your vehicle and the service you want.</p></li>
+        <li><h3>Get your price and time</h3><p>Grayson replies with a quote for your vehicle and an open spot that works for you.</p></li>
+        <li><h3>Get it detailed</h3><p>He takes his time on it, inside and out, the same way he does for every vehicle.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section about band" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <p class="label">About Grayson</p>
+        <h2 id="about-title">A love of cars and pride in the finish</h2>
+        <p>Grayson started his detailing business in Pembroke in the summer of 2021. It grew out of a passion for cars and a lot of care for the finish.</p>
+        <p>He's been voted first in Renfrew County three times: 2023, 2024 and 2026. Every vehicle gets the same meticulous work, whether it's a daily driver, a family SUV or a work truck.</p>
+      </div>
+      <figure class="pull">
+        <blockquote>“I treat every car like it's going to be the one that wins me another year.”</blockquote>
+        <figcaption>Grayson, owner</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div class="book-info">
+        <p class="label">Book a detail</p>
+        <h2 id="book-title">Tell Grayson about your vehicle</h2>
+        <p class="lede">Send a request and he'll get back to you with a price and an open time.</p>
+        <div>
+          <div class="contact-line"><span class="k">Email</span><a class="v" href="mailto:grayson@graysonsautomotivedetailing.com">grayson@graysonsautomotivedetailing.com</a></div>
+          <div class="contact-line"><span class="k">Facebook</span><a class="v" href="https://www.facebook.com/graysonsdetailing" target="_blank" rel="noopener">facebook.com/graysonsdetailing</a></div>
+          <div class="contact-line"><span class="k">Service area</span><span class="v">Pembroke and Renfrew County, Ontario</span></div>
+        </div>
+      </div>
+
+      <div class="order">
+        <div class="order-head"><strong>Booking request</strong><span id="order-no">Request</span></div>
+        <form id="booking" novalidate>
+          <div class="row two">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-contact">Phone or email</label><input id="f-contact" name="contact" autocomplete="email" required></div>
+          </div>
+          <div class="row two">
+            <div class="field"><label for="f-vehicle">Vehicle</label><input id="f-vehicle" name="vehicle" placeholder="e.g. 2019 Ford F-150"></div>
+            <div class="field"><label for="f-when">Preferred dates</label><input id="f-when" name="when" placeholder="e.g. weekends in June"></div>
+          </div>
+          <fieldset class="field">
+            <legend>Vehicle type</legend>
+            <div class="chips">
+              <input type="radio" name="size" id="s-car" value="Car" checked><label for="s-car">Car</label>
+              <input type="radio" name="size" id="s-suv" value="SUV / crossover"><label for="s-suv">SUV / crossover</label>
+              <input type="radio" name="size" id="s-truck" value="Truck"><label for="s-truck">Truck</label>
+              <input type="radio" name="size" id="s-van" value="Van / minivan"><label for="s-van">Van / minivan</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-service">Service</label>
+            <select id="f-service" name="service">
+              <option>Full detail</option>
+              <option>Interior detail</option>
+              <option>Exterior detail</option>
+              <option>Seasonal refresh</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-notes">Anything Grayson should know?</label><textarea id="f-notes" name="notes" placeholder="Pet hair, stains, selling the vehicle soon…"></textarea></div>
+          <p class="form-error" id="form-error" hidden>Add your name and a phone number or email so Grayson can reply.</p>
+          <button class="btn btn-gold" type="submit">Prepare my request</button>
+        </form>
+
+        <div class="ready" id="ready" hidden>
+          <h3>Your request is ready to send</h3>
+          <p>Open it in your email app, or copy it and send it to <strong style="user-select:all">grayson@graysonsautomotivedetailing.com</strong> or by Facebook message.</p>
+          <pre id="ready-text"></pre>
+          <div class="actions">
+            <a class="btn btn-gold" id="ready-mail" href="#">Open in email</a>
+            <button class="btn btn-ghost" type="button" id="ready-copy">Copy request</button>
+            <button class="btn btn-ghost" type="button" id="ready-edit">Edit</button>
+          </div>
+          <p class="status" id="ready-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer band">
+  <div class="wrap footer-grid">
+    <span>© <span id="year">2026</span> Grayson's Automotive Detailing · Pembroke, Ontario</span>
+    <span><a href="mailto:grayson@graysonsautomotivedetailing.com">Email</a> · <a href="https://www.facebook.com/graysonsdetailing" target="_blank" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a class="btn btn-gold" href="#book">Book a detail</a></div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <img id="lightbox-img" alt="">
+  <button class="btn btn-ghost" type="button" id="lightbox-close">Close</button>
+</div>
+
+<script>
+(function () {
+  var EMAIL = "grayson@graysonsautomotivedetailing.com";
+
+  /* ---- Gallery ----
+     Put photos in images/ and list them here, e.g.
+     { src: "images/f150-interior-after.jpg", caption: "F-150 interior, after" }
+     Until then, labelled empty slots are shown. */
+  var PHOTOS = [];
+  var SLOTS = ["Interior: before & after", "Exterior gloss", "Wheels & tires", "Full detail", "Seats & carpets", "Trucks & SUVs"];
+
+  var gallery = document.getElementById("gallery");
+  if (PHOTOS.length) {
+    PHOTOS.forEach(function (p) {
+      var fig = document.createElement("figure");
+      fig.className = "shot";
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("aria-label", "Enlarge: " + p.caption);
+      var img = document.createElement("img");
+      img.src = p.src; img.alt = p.caption; img.loading = "lazy";
+      btn.appendChild(img);
+      btn.addEventListener("click", function () { openLightbox(p); });
+      var cap = document.createElement("figcaption");
+      cap.textContent = p.caption;
+      fig.appendChild(btn); fig.appendChild(cap);
+      gallery.appendChild(fig);
+    });
+  } else {
+    SLOTS.forEach(function (label) {
+      var fig = document.createElement("figure");
+      fig.className = "shot empty";
+      fig.innerHTML = "<div><strong></strong><span>Photo coming soon</span></div>";
+      fig.querySelector("strong").textContent = label;
+      gallery.appendChild(fig);
+    });
+  }
+
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lightbox-img");
+  function openLightbox(p) { lbImg.src = p.src; lbImg.alt = p.caption; lb.hidden = false; document.getElementById("lightbox-close").focus(); }
+  function closeLightbox() { lb.hidden = true; lbImg.removeAttribute("src"); }
+  document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !lb.hidden) closeLightbox(); });
+
+  /* ---- Service links preselect the form ---- */
+  var serviceSelect = document.getElementById("f-service");
+  document.querySelectorAll("[data-service]").forEach(function (a) {
+    a.addEventListener("click", function () { serviceSelect.value = a.getAttribute("data-service"); });
+  });
+
+  /* ---- Booking request ---- */
+  var form = document.getElementById("booking");
+  var ready = document.getElementById("ready");
+  var err = document.getElementById("form-error");
+  var status = document.getElementById("ready-status");
+  var text = "";
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = new FormData(form);
+    var name = (d.get("name") || "").trim();
+    var contact = (d.get("contact") || "").trim();
+    if (!name || !contact) { err.hidden = false; (name ? form.contact : form.name).focus(); return; }
+    err.hidden = true;
+    var lines = [
+      "Hi Grayson,",
+      "",
+      "I'd like to book a detail.",
+      "",
+      "Name: " + name,
+      "Contact: " + contact,
+      "Service: " + d.get("service"),
+      "Vehicle type: " + d.get("size"),
+      "Vehicle: " + ((d.get("vehicle") || "").trim() || "(not given)"),
+      "Preferred dates: " + ((d.get("when") || "").trim() || "(flexible)")
+    ];
+    var notes = (d.get("notes") || "").trim();
+    if (notes) { lines.push("", "Notes: " + notes); }
+    lines.push("", "Thanks!");
+    text = lines.join("\n");
+    document.getElementById("ready-text").textContent = text;
+    var subject = "Detail request: " + d.get("service") + " (" + d.get("size") + ")";
+    document.getElementById("ready-mail").href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
+    status.textContent = "";
+    form.hidden = true;
+    ready.hidden = false;
+    ready.querySelector("h3").setAttribute("tabindex", "-1");
+    ready.querySelector("h3").focus();
+  });
+
+  document.getElementById("ready-edit").addEventListener("click", function () {
+    ready.hidden = true; form.hidden = false; form.name.focus();
+  });
+
+  document.getElementById("ready-copy").addEventListener("click", function () {
+    var pre = document.getElementById("ready-text");
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(pre);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent = "Text selected. Press Ctrl+C or ⌘C to copy.";
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { status.textContent = "Copied to clipboard."; }, selectIt);
+    } catch (x) { selectIt(); }
+  });
+
+  /* ---- Rosette scallops ---- */
+  var g = document.getElementById("scallops");
+  if (g) {
+    var ns = "http://www.w3.org/2000/svg";
+    for (var i = 0; i < 28; i++) {
+      var a = (i / 28) * Math.PI * 2;
+      var c = document.createElementNS(ns, "circle");
+      c.setAttribute("cx", (120 + Math.cos(a) * 102).toFixed(2));
+      c.setAttribute("cy", (120 + Math.sin(a) * 102).toFixed(2));
+      c.setAttribute("r", "12");
+      g.appendChild(c);
+    }
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

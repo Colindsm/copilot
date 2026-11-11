@@ -1,0 +1,8 @@
+{
+  // Static site served by Cloudflare Workers (same platform as Grayson's earlier draft).
+  "name": "graysons-detailing",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
