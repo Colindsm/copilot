@@ -1,7 +1,9 @@
 {
-  // Static site served by Cloudflare Workers (same platform as Grayson's earlier draft).
+  // Static site served by Cloudflare Workers, in Grayson's Cloudflare account.
   "name": "graysons-detailing",
+  "account_id": "38e6ba3cb2fba1b47bb4a55a6e7bf97d",
   "compatibility_date": "2026-10-01",
+  "workers_dev": false,
   "assets": {
     "directory": "./public"
   }
