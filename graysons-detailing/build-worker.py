@@ -54,7 +54,7 @@ export default {
     return new Response(request.method === "HEAD" ? null : body(f), {
       headers: {
         "content-type": f.t,
-        "cache-control": isHtml ? "public, max-age=300" : "public, max-age=604800",
+        "cache-control": isHtml ? "no-cache" : "public, max-age=604800",
         "x-content-type-options": "nosniff"
       }
     });
